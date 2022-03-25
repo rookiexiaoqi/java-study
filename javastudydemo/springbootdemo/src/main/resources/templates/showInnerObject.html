@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${#httpServletRequest.getAttribute('attribute')}"></p>
+<p th:text="${#httpSession.getAttribute('session')}"></p>
+<p th:text="${#httpServletRequest.getServletContext().getAttribute('context')}"></p>
+<p th:text="${model}"></p>
+<hr/>
+<p th:text="'sessionMessage='+${session.session}"></p>
+<p th:text="'applicationMessage'+${application.context}"></p>
+</body>
+</html>

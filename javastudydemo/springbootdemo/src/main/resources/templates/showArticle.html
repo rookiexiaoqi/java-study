@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+    <p th:text="'书籍id:'+${article.id}" ></p>
+    <p th:text="'书名:'+${article.name}" ></p>
+    <p th:text="'作者:'+${article.author}"></p>
+    <p th:text="'页数:'+${article.page}"></p>
+    <p th:text="'价格:'+${article.price}"></p>
+</div>
+<p></p>
+<div th:object="${article}">
+    <p th:text="'书籍id:'+*{id}" ></p>
+    <p th:text="'书名:'+*{name}" ></p>
+    <p th:text="'作者:'+*{author}"></p>
+    <p th:text="'页数:'+*{page}"></p>
+    <p th:text="'价格:'+*{price}"></p>
+</div>
+</body>
+</html>

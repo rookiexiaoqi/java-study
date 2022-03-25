@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        table thead th{
+            border:1px solid black;
+        }
+        table tbody td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0">
+    <thead>
+    <th>书籍id</th>
+    <th>书名</th>
+    <th>作者</th>
+    <th>页数</th>
+    <th>价格</th>
+    </thead>
+    <tbody>
+    <tr th:each="article,stat:${article}">
+        <td th:text="${stat.count}"></td>
+        <td th:text="${article.id}"></td>
+        <td th:text="${article.name}"></td>
+        <td th:text="${article.author}"></td>
+        <td th:text="${article.page}"></td>
+        <td th:text="${article.price}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
